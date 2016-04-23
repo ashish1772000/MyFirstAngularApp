@@ -1,0 +1,24 @@
+<div>
+    <h2>Employee List</h2>
+</div>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email ID</th>
+            </tr>
+        </thead>
+        <tbody>         
+            <tr ng-repeat="Emp in Employees">                
+                <td>{{Emp.Id}}</td>
+                <td>{{Emp.FirstName}}</td>
+                <td>{{Emp.LastName}}</td>
+                <td>{{Emp.Email}}</td>
+                <td><input class="btn btn-default" type="button" ng-click="itemSelected(Emp)" value="Edit" /></td>  
+            </tr>
+        </tbody>
+    </table>
+</div>
