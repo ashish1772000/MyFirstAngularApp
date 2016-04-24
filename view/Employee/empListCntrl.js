@@ -17,8 +17,12 @@ appOrg.controller('empListCntrl', ['$scope','myFact', '$location', function ($sc
 */
 
 appOrg.controller('empListCntrl', ['$scope', 'myFact', '$location', '$http', function ($scope, myFact, $location, $http) {
+
+  $http.defaults.useXDomain = true;
+  delete $http.defaults.headers.common['X-Requested-With'];
     
-  $http.get("http://localhost:8080/api/Employee")
+  // $http.get("http://localhost:8080/api/Employee")
+  $http.get("projectstatus.azurewebsites.net/api/employee")
         .then(function(response){
                 $scope.Employees = response.data;
               }, 
