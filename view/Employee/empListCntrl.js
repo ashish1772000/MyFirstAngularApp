@@ -22,7 +22,7 @@ appOrg.controller('empListCntrl', ['$scope', 'myFact', '$location', '$http', fun
   delete $http.defaults.headers.common['X-Requested-With'];
     
   // $http.get("http://localhost:8080/api/Employee")
-  $http.get("projectstatus.azurewebsites.net/api/employee")
+  $http.get("http://projectstatus.azurewebsites.net/api/employee")
         .then(function(response){
                 $scope.Employees = response.data;
               }, 
